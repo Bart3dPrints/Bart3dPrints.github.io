@@ -12,11 +12,29 @@ export default function Home() {
       const headerOffset = 80;
       const elementPosition = element.offsetTop;
       const offsetPosition = elementPosition - headerOffset;
+      const startPosition = window.pageYOffset;
+      const distance = offsetPosition - startPosition;
+      const duration = 1000; // 1 second
+      let start: number | null = null;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+      function step(timestamp: number) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        const percentage = Math.min(progress / duration, 1);
+        
+        // Easing function for smooth animation
+        const ease = percentage < 0.5 
+          ? 4 * percentage * percentage * percentage 
+          : (percentage - 1) * (2 * percentage - 2) * (2 * percentage - 2) + 1;
+        
+        window.scrollTo(0, startPosition + distance * ease);
+        
+        if (progress < duration) {
+          window.requestAnimationFrame(step);
+        }
+      }
+      
+      window.requestAnimationFrame(step);
     }
   };
 
