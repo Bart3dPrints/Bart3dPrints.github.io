@@ -1,34 +1,10 @@
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
-// Import the provided images
-import printerPolarBearImage from "@assets/image_1757382001339.png";
-import printerPandaImage from "@assets/image_1757382036976.png";
-import rainbowOctopusImage from "@assets/image_1757382060276.png";
-import collectionImage from "@assets/image_1757382085445.png";
+// Import the benchy image
+import benchyImage from "@assets/image_1757382298644.png";
 
 export default function Home() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  // Array of background images for the slideshow
-  const backgroundImages = [
-    printerPolarBearImage,
-    printerPandaImage,
-    rainbowOctopusImage,
-    collectionImage,
-  ];
-
-  // Rotate background images every 4 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        (prevIndex + 1) % backgroundImages.length
-      );
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [backgroundImages.length]);
 
   const scrollToProjects = () => {
     const projectsSection = document.getElementById('projects');
@@ -99,16 +75,13 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section with Rotating Background */}
+      {/* Hero Section with Benchy Background */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Rotating Background Images */}
-        {backgroundImages.map((image, index) => (
-          <div
-            key={index}
-            className={`hero-bg ${index === currentImageIndex ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${image})` }}
-          />
-        ))}
+        {/* Static Background Image */}
+        <div
+          className="hero-bg active"
+          style={{ backgroundImage: `url(${benchyImage})` }}
+        />
 
         <div className="hero-overlay"></div>
         
