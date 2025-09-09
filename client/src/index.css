@@ -91,6 +91,13 @@
     scroll-behavior: smooth;
     scroll-padding-top: 80px; /* Account for fixed navbar */
   }
+
+  /* Enhanced smooth scrolling for all browsers */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
 }
 
 /* Hero Background Slideshow Styles */
