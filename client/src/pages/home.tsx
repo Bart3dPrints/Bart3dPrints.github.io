@@ -140,8 +140,8 @@ export default function Home() {
             
             <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100">
               <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8" data-testid="about-intro">
-                Hi there! I'm <span className="font-bold text-primary">Bart</span>, a dedicated scholar with an 
-                insatiable passion for the art and science of 3D printing.
+                Hey! I'm <span className="font-bold text-primary">Bart</span>, a high school student graduating in 2029 
+                who's really into 3D printing.
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 text-left">
@@ -149,16 +149,15 @@ export default function Home() {
                   <div className="flex items-start gap-4">
                     <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-lg text-gray-600 leading-relaxed" data-testid="about-scholar">
-                      As a scholar, I approach every project with curiosity and precision, 
-                      constantly exploring the boundaries of what's possible with additive manufacturing.
+                      I take my studies seriously and like to apply the same careful approach to my 3D printing projects.
                     </p>
                   </div>
                   
                   <div className="flex items-start gap-4">
                     <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-lg text-gray-600 leading-relaxed" data-testid="about-passion">
-                      What started as casual interest has evolved into a genuine addiction - 
-                      I find myself completely captivated by the endless possibilities of turning digital dreams into tangible reality.
+                      3D printing started as a hobby but honestly, I'm pretty hooked on it now. 
+                      There's something satisfying about designing something and then actually holding it in your hands.
                     </p>
                   </div>
                 </div>
@@ -167,24 +166,24 @@ export default function Home() {
                   <div className="flex items-start gap-4">
                     <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-lg text-gray-600 leading-relaxed" data-testid="about-hobby">
-                      Every spare moment finds me designing, printing, and experimenting with new techniques. 
-                      From intricate miniatures to functional prototypes, each print teaches me something new.
+                      I spend most of my free time working on prints and learning new techniques. 
+                      Still figuring things out, but that's part of the fun.
                     </p>
                   </div>
                   
                   <div className="flex items-start gap-4">
                     <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-lg text-gray-600 leading-relaxed" data-testid="about-commitment">
-                      I'm committed to documenting this incredible journey and sharing my discoveries with fellow makers. 
-                      This site will grow alongside my skills, chronicling every success, failure, and breakthrough.
+                      I'll try to keep this site updated with my projects and what I'm learning. 
+                      No promises on how often I'll post, but I'll do my best.
                     </p>
                   </div>
                 </div>
               </div>
               
               <div className="mt-10 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl">
-                <p className="text-lg text-gray-700 italic text-center" data-testid="about-quote">
-                  "In the world of 3D printing, every layer tells a story, and I'm here to share mine."
+                <p className="text-lg text-gray-700 text-center" data-testid="about-quote">
+                  Just a student sharing what I'm working on.
                 </p>
               </div>
             </div>
