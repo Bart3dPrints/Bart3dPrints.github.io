@@ -19,6 +19,7 @@ export default function Home() {
 
   const scrollToProjects = () => smoothScrollTo('projects');
   const scrollToContact = () => smoothScrollTo('contact');
+  const scrollToAbout = () => smoothScrollTo('about');
   const scrollToHero = () => smoothScrollTo('hero');
 
   return (
@@ -40,6 +41,13 @@ export default function Home() {
                 data-testid="nav-home"
               >
                 Home
+              </button>
+              <button 
+                onClick={scrollToAbout}
+                className="text-foreground hover:text-primary transition-colors"
+                data-testid="nav-about"
+              >
+                About
               </button>
               <button 
                 onClick={scrollToProjects}
@@ -96,6 +104,69 @@ export default function Home() {
             >
               View Projects
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* About Me Section */}
+      <section id="about" className="py-20 bg-gradient-to-br from-white to-blue-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8" data-testid="about-title">
+              About Me
+            </h2>
+            <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>
+            
+            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100">
+              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8" data-testid="about-intro">
+                Hi there! I'm <span className="font-bold text-primary">Bart</span>, a dedicated scholar with an 
+                insatiable passion for the art and science of 3D printing.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-8 text-left">
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-lg text-gray-600 leading-relaxed" data-testid="about-scholar">
+                      As a scholar, I approach every project with curiosity and precision, 
+                      constantly exploring the boundaries of what's possible with additive manufacturing.
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-lg text-gray-600 leading-relaxed" data-testid="about-passion">
+                      What started as casual interest has evolved into a genuine addiction - 
+                      I find myself completely captivated by the endless possibilities of turning digital dreams into tangible reality.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-lg text-gray-600 leading-relaxed" data-testid="about-hobby">
+                      Every spare moment finds me designing, printing, and experimenting with new techniques. 
+                      From intricate miniatures to functional prototypes, each print teaches me something new.
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-lg text-gray-600 leading-relaxed" data-testid="about-commitment">
+                      I'm committed to documenting this incredible journey and sharing my discoveries with fellow makers. 
+                      This site will grow alongside my skills, chronicling every success, failure, and breakthrough.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-10 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl">
+                <p className="text-lg text-gray-700 italic text-center" data-testid="about-quote">
+                  "In the world of 3D printing, every layer tells a story, and I'm here to share mine."
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
