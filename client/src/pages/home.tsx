@@ -6,35 +6,20 @@ import benchyImage from "@assets/image_1757382298644.png";
 
 export default function Home() {
 
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+  const smoothScrollTo = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const offsetTop = element.offsetTop - 70; // Account for fixed navbar
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
       });
     }
   };
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
-  const scrollToHero = () => {
-    const heroSection = document.getElementById('hero');
-    if (heroSection) {
-      heroSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
+  const scrollToProjects = () => smoothScrollTo('projects');
+  const scrollToContact = () => smoothScrollTo('contact');
+  const scrollToHero = () => smoothScrollTo('hero');
 
   return (
     <div className="min-h-screen bg-background text-foreground">
